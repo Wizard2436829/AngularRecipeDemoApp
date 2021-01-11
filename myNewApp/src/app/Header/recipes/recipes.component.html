@@ -1,0 +1,12 @@
+<!-- <p>recipes works!</p> -->
+<div class="row">
+    <div class="col-md-5">
+        <app-recipe-list (RecipeSelectedEvent)="SelectedRecipeCaught=$event"></app-recipe-list>
+    </div>
+    <div class="col-md-7">
+        <app-recipe-detail *ngIf="SelectedRecipeCaught; else infoText" [RecipeDetailInjectObj]="SelectedRecipeCaught"></app-recipe-detail>
+        <ng-template #infoText>
+            <p>There is some receipe here.</p>
+        </ng-template>
+    </div>
+</div>

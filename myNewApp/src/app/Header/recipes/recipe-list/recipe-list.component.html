@@ -1,0 +1,20 @@
+<!-- <p>recipe-list works!</p> -->
+<div class="row">
+    <div class="col-xs-12">
+    <button class="btn btn-success">
+        New Recipe
+    </button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-xs-12">        
+        <app-recipe-item (event_RecipeOnClicked)="onRecipeSelected(TempRecipe)" *ngFor="let TempRecipe of recipes" [RecipeElement]="TempRecipe" ></app-recipe-item> 
+    </div>
+</div>
+
+<hr>
+
+
