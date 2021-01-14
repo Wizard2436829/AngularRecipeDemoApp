@@ -3,4 +3,4 @@
 
 Welcome to the dark side of the force.
 
-Something is really getting pushed.
+This project will be used in order to showcase all the concepts learnt while following the angular tutorials by Max.
