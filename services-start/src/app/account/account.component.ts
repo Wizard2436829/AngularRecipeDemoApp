@@ -22,5 +22,8 @@ export class AccountComponent {
     //this.statusChanged.emit({id: this.id, newStatus: status});
 
     //this.varloggingService.logToConsole('The status has changed to : ' + status);
+
+    this.newDataService.statusUpdated.emit(status);
+
   }
 }

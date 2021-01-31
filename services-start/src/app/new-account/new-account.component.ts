@@ -11,7 +11,13 @@ import {loggingService} from '../services/logging.service';
 export class NewAccountComponent {
   //@Output() accountAdded = new EventEmitter<{name: string, status: string}>();
 
-  constructor(private varloggingService:loggingService,private newDataService:dataService){}
+  constructor(private varloggingService:loggingService,private newDataService:dataService){
+
+    this.newDataService.statusUpdated.subscribe(
+      (status:string) => alert('The new status that has been modified is ' + status)
+    );
+
+  }
 
   onCreateAccount(accountName: string, accountStatus: string) {
 
