@@ -1,6 +1,9 @@
-# This is the start of the Sith !!!
+# Angular learning engine !!!
 
 
-Welcome to the dark side of the force.
+This Repository will be having the application that has been built while learning Angular.
+It will also contain the POC's built in order to demonstrate the various topics covered in angular.
 
-This project will be used in order to showcase all the concepts learnt while following the angular tutorials by Max.
+Here On-Wards are the Date by Date commits and what topics do the commits principally cover.
+
+01.02.2021 -- Services,DI.
