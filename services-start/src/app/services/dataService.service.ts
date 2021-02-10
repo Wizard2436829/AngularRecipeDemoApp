@@ -5,7 +5,6 @@ import { loggingService } from "./logging.service";
 
 export class dataService{
 
-
     constructor(private newLoggingService:loggingService){}
 
     accounts = [
@@ -31,7 +30,7 @@ export class dataService{
             name:newName,
             status:newStatus
         })
-        this.newLoggingService.logToConsole(newName + ' is the new server added.')
+        this.newLoggingService.logToConsole(newName + ' is the new server added.');
 
       }
 
