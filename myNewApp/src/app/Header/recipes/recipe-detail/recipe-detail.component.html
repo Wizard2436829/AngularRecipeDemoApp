@@ -19,7 +19,7 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="#">To the Shopping list.</a></li>
+                <li><a (click)="On_click_addIngredients_SList()" style="cursor: pointer;">To the Shopping list.</a></li>
                 <li><a href="#">Edit the Recipe.</a></li>
                 <li><a href="#">Delete the Recipe.</a></li>
             </ul>
@@ -27,14 +27,24 @@
     </div>
 </div>
 
-<div class="row">
+<br>
+
+<div class="row descriptions">
     <div class="col-xs-12">
         {{RecipeDetailInjectObj.description}}
     </div>
 </div>
 
-<div class="row">
+<br>
+
+<div class="row headings">
     <div class="col-xs-12">
-        Ingridient
+        Ingredients
     </div>
+</div>
+
+<div>
+    <ul class="list-group">
+        <a class="list-group-item" *ngFor="let tempIng of RecipeDetailInjectObj.ingredientList">{{tempIng.name}} ({{tempIng.amount}})</a>
+    </ul>
 </div>

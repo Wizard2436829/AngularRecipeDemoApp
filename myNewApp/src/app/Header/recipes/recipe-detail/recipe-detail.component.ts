@@ -1,18 +1,21 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../Services/recipe.service';
 
 @Component({
   selector: 'app-recipe-detail',
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.css']
 })
-export class RecipeDetailComponent implements OnInit {
+export class RecipeDetailComponent {
 
-  constructor() { }
+  constructor(private recipeServiceInjectObj:RecipeService) { }
 
   @Input() RecipeDetailInjectObj : Recipe; 
 
-  ngOnInit() {
+  On_click_addIngredients_SList(){    
+    this.recipeServiceInjectObj.on_Add_Ingredients_to_SList(this.RecipeDetailInjectObj.ingredientList);
+    console.log(this.RecipeDetailInjectObj.ingredientList);
   }
 
 }

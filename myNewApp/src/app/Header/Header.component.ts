@@ -13,7 +13,6 @@ export class HeaderComponent{
   @Output() FeatureSelectedEvent = new EventEmitter<string>();
 
   FeatureSelected(feature:string){
-
     this.FeatureSelectedEvent.emit(feature);
   }
 

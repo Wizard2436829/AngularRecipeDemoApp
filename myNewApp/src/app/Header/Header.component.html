@@ -1,17 +1,17 @@
-<!-- <h1>
-    The Header
-</h1> -->
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
 
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+
+            <!-- <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
               <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]">Burger 1</span>
-            </button>
+            </button> -->
+
             <a routerLink="/" class="navbar-brand">Recipe Book</a>
-          </div>
-          <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+
+        </div>
+
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
 
             <ul class="nav navbar-nav">
                 <li><a href="#" (click)="FeatureSelected('recipe')">Recipes</a></li>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +7,16 @@ import { Component } from '@angular/core';
 })
 
 
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  ngOnInit(){
+    console.log("Holy shit it hit the breakpoint !! ");
+  }
 
   FeatureSelectedProperty:string;
 
-  FeatureSelectedMethod = function(feature:string){
-
+  FeatureSelectedMethod(feature:string){
     this.FeatureSelectedProperty = feature;
-
   }
   
 }
