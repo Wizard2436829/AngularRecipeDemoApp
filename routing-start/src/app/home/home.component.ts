@@ -13,8 +13,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onbtnClick(){
-    this.tempRouter.navigate(['/servers']); // this is an absolute path.
+  onbtnClick(id:number){
+    this.tempRouter.navigate(['/servers',id,'edit'],
+    {queryParams : {allowEdit:'1'},fragment:'loading'});     // this is an absolute path.
   }
+
+
 
 }
