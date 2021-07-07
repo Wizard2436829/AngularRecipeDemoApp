@@ -9,3 +9,5 @@ Here On-Wards are the Date by Date commits and what topics do the commits princi
 01.02.2021 -- Services,DI,alongwith cross-communication using services.
 
 10.02.2021 -- Pushing the services assignment code.
+
+07.07.2021 -- Pushing routing code till lecture 139.
