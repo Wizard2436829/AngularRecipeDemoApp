@@ -11,3 +11,5 @@ Here On-Wards are the Date by Date commits and what topics do the commits princi
 10.02.2021 -- Pushing the services assignment code.
 
 07.07.2021 -- Pushing routing code till lecture 139.
+
+03.08.2021 -- Pushing code till lecture 143
