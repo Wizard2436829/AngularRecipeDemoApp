@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { ServersService } from '../servers.service';
 
@@ -9,21 +9,28 @@ import { ServersService } from '../servers.service';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
-  server: {id: number, name: string, status: string};
+  server: { id: number, name: string, status: string };
 
-  constructor(private serversService: ServersService,private route:ActivatedRoute) { }
+  constructor(private serversService: ServersService,
+    private route: ActivatedRoute,
+    private tempRouter: Router) { }
 
   ngOnInit() {
+
     const serverID = +this.route.snapshot.params['id'];
     this.server = this.serversService.getServer(serverID);
 
     // below is the code used to subscribe to the params observable.
     this.route.params.subscribe(
-      (params:Params) => {
+      (params: Params) => {
         this.server = this.serversService.getServer(+params.id);
       }
     )
 
+  }
+
+  onEdit() {
+    this.tempRouter.navigate(['edit'], { relativeTo: this.route , queryParamsHandling : 'preserve'})
   }
 
 }
