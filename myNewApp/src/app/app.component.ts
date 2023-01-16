@@ -15,6 +15,8 @@ export class AppComponent implements OnInit{
 
   FeatureSelectedProperty:string;
 
+  // There is something over here.
+
   FeatureSelectedMethod(feature:string){
     this.FeatureSelectedProperty = feature;
   }
